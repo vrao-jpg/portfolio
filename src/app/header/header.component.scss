@@ -38,6 +38,7 @@
     color: white;
     align-items: center;
     padding-left: 100px;
+    position:relative;
     .tab {
       width: 120px;
       text-align: center;
@@ -64,6 +65,7 @@
     }
     .href-container{
     justify-content: flex-end;
+    height: 60px;
     .hamburger {
         display: block;
         height:100%;
@@ -78,7 +80,7 @@
         z-index: 1;
         position: absolute;
         height: 140px;
-        bottom: -180px;
+        top:60px;
         background: #333;
         width: 100%;
         justify-content: space-around;
