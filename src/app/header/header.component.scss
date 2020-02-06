@@ -33,13 +33,14 @@
 .href-container {
     display: flex;
     flex-direction: row;
-    height: 40px;
+    height: 60px;
     background: #1b242f;
     color: white;
     align-items: center;
     padding-left: 100px;
     position:relative;
     .tab {
+        height: 100%;
       width: 120px;
       text-align: center;
       font-size: 29px;
@@ -47,6 +48,10 @@
       background-size: 100% 200%;
       background-image: linear-gradient(to bottom ,#1b242f 42%, #9400D3 58%);
       transition: background-position 1s;
+      label {
+        position: relative;
+        top: 11px;
+      }
     }
     .tab:hover {
         background-position: 0 -110%;
@@ -85,6 +90,7 @@
         width: 100%;
         justify-content: space-around;
         transition: .5s ease;
+        border-bottom: 2px solid cyan;
         .item{
             padding-left: 20px;
             height: 100%;
