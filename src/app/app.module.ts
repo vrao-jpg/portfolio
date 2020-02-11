@@ -7,13 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { homeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { aboutComponent } from './about/about.component';
+import { contactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     homeComponent,
-    aboutComponent
+    aboutComponent,
+    contactComponent
   ],
   imports: [
     BrowserModule,

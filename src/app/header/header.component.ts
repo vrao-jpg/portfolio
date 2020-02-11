@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { trigger, transition , style, animate, state, group } from '@angular/animations';
 
 @Component({
@@ -44,6 +44,17 @@ export class HeaderComponent{
   linkList = ['About', 'Career', 'Contact'];
   showMenu : boolean= false;
   animationState = 'out';
+  menuOnTop :boolean = false;
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    const menu = document.getElementById('menubar');
+    console.warn(menu.getBoundingClientRect());
+    if (menu.getBoundingClientRect().bottom < -20) {
+      this.menuOnTop = true;
+    } else {
+      this.menuOnTop = false;
+    }
+  }
   toggleDiv() {
     this.animationState = this.animationState === 'out' ? 'in' : 'out';
     console.warn(this.animationState);

@@ -19,6 +19,11 @@
         color:#9400D3;
     }
 }
+.show-top{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+}
 @media only screen and (min-device-width: 880px) {
     .intro:hover {
         font-size: 60px;
@@ -69,8 +74,11 @@
         display: none;
     }
     .href-container{
+        padding-left:0px;
+    display: flex;
     justify-content: flex-end;
     height: 60px;
+
     .hamburger {
         display: block;
         height:100%;
