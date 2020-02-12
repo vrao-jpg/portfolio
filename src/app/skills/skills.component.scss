@@ -1,0 +1,46 @@
+.skillsContainer {
+    background-image: url("../../assets/images/skillshtml.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:400px;
+    label {
+      font-size: 60px;
+      font-weight: 900;
+      font-family: cursive;
+    }
+    .row {
+        margin-top: 30px;
+        display:flex;
+        flex-direction:row;
+        .rowChild{
+            display: flex;
+            .html {
+              margin-right: 30px;
+            }
+        }
+        .image {
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
+@media only screen and (max-device-width: 900px) {
+    .skillsContainer {
+        .row {
+            margin-top: 30px;
+            display:flex;
+            flex-direction:row;
+            .rowChild{
+              flex-direction: column;
+              .html {
+                margin-right: 30px;
+              }
+            }
+            .image {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}
