@@ -41,14 +41,13 @@ import { trigger, transition , style, animate, state, group } from '@angular/ani
   ]
 })
 export class HeaderComponent{
-  linkList = ['About', 'Career', 'Contact'];
+  linkList = ['About', 'Skill', 'Contact'];
   showMenu : boolean= false;
   animationState = 'out';
   menuOnTop :boolean = false;
   @HostListener("window:scroll", [])
   onWindowScroll() {
     const menu = document.getElementById('menubar');
-    console.warn(menu.getBoundingClientRect());
     if (menu.getBoundingClientRect().bottom < -20) {
       this.menuOnTop = true;
     } else {
@@ -59,5 +58,11 @@ export class HeaderComponent{
     this.animationState = this.animationState === 'out' ? 'in' : 'out';
     console.warn(this.animationState);
     this.showMenu = !this.showMenu;
+  }
+  goToDiv(list : any) {
+    // let divBox = document.getElementById(list) as HTMLElement;
+    // divBox.scrollIntoView();
+    // divBox.scrollTop += 200;
+    // console.warn(window.scrollX - 10);
   }
 }
